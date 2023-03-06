@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Puzzle</title>
+    <link rel="stylesheet" href="./style & script/style.css">
+</head>
+<body>
+    <!-- MENU -->
+    <main class="menu play">
+        <span>LEVEL</span>
+        <section>
+            <button class="box-lvl">3<span>x</span>3</button>
+            <button class="box-lvl">4<span>x</span>4</button>
+            <button class="box-lvl">5<span>x</span>5</button>
+        </section>
+        <button class="play">PLAY</button>
+    </main>
+
+    <!-- BOARD 3x3 BoxMove 150px -->
+    <main class="board3x3 hidden">
+        <div class="area">
+            <span>1</span><span>2</span><span>3</span>
+            <span>4</span><span>5</span><span>6</span>
+            <span>7</span><span>8</span>
+        </div>
+        <div class="brd-sort">Sort the Board</div>
+    </main>
+    <!-- BOARD 4x4 BoxMove 112.5px -->
+    <main class="board4x4 hidden">
+        <div class="area">
+            <span>1</span><span>2</span><span>3</span><span>4</span>
+            <span>5</span><span>6</span><span>7</span><span>8</span>
+            <span>9</span><span>10</span><span>11</span><span>12</span>
+            <span>13</span><span>14</span><span>15</span>
+        </div>
+        <div class="brd-sort">Sort the Board</div>
+    </main>
+    <!-- BOARD 5x5 BoxMove 90px -->
+    <main class="board5x5 hidden">
+        <div class="area">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+            <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+            <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+            <span>21</span><span>22</span><span>23</span><span>24</span>
+        </div>
+        <div class="brd-sort">Sort the Board</div>
+    </main>
+
+    <!-- STATUS -->
+    <main class="status hidden">
+        <span class="sts-text">YOU LOSE</span>
+        <div class="btn">
+            <button>Play Again</button>
+            <button>X</button>
+        </div>
+    </main>
+
+    <!-- JS -->
+    <script src="./style & script/script.js"></script>
+</body>
+</html>

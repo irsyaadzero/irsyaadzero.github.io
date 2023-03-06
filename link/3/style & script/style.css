@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  color: white;
+  font-family: calibri, Arial, sans-serif;
+  font-weight: bold;
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.menu {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px 150px 110px;
+  background: white;
+  width: 470px;
+  height: 370px;
+  border-radius: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.menu span {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.menu section {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.menu .play {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.menu span, .menu section .box-lvl, .menu .play {
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  font-family: calibri, sans-serif;
+  font-weight: bold;
+}
+.menu span {
+  background: #1ae7ff;
+  width: 440px;
+  line-height: 80px;
+  font-size: 64px;
+  text-align: center;
+}
+.menu section {
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu section .box-lvl {
+  background: #1ae7ff;
+  width: 140px;
+  line-height: 140px;
+  font-size: 80px;
+}
+.menu section .box-lvl span {
+  font-size: 64px;
+}
+.menu .play {
+  background: #00c8f0;
+  width: 440px;
+  line-height: 100px;
+  font-size: 96px;
+}
+
+.board3x3, .board4x4, .board5x5 {
+  background: white;
+  width: 470px;
+  height: 470px;
+  border-radius: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+.board3x3 .area, .board4x4 .area, .board5x5 .area {
+  display: grid;
+  place-items: center;
+  width: 440px;
+  height: 440px;
+}
+.board3x3 .area span, .board4x4 .area span, .board5x5 .area span {
+  text-align: center;
+  border-radius: 0.5rem;
+  position: absolute;
+  place-self: start;
+}
+.board3x3 .area span:nth-child(1), .board3x3 .area span:nth-child(3), .board3x3 .area span:nth-child(5),
+.board3x3 .area span:nth-child(7), .board3x3 .area span:nth-child(9), .board3x3 .area span:nth-child(11),
+.board3x3 .area span:nth-child(13), .board3x3 .area span:nth-child(15), .board3x3 .area span:nth-child(17),
+.board3x3 .area span:nth-child(19), .board3x3 .area span:nth-child(21), .board3x3 .area span:nth-child(23), .board4x4 .area span:nth-child(1), .board4x4 .area span:nth-child(3), .board4x4 .area span:nth-child(5),
+.board4x4 .area span:nth-child(7), .board4x4 .area span:nth-child(9), .board4x4 .area span:nth-child(11),
+.board4x4 .area span:nth-child(13), .board4x4 .area span:nth-child(15), .board4x4 .area span:nth-child(17),
+.board4x4 .area span:nth-child(19), .board4x4 .area span:nth-child(21), .board4x4 .area span:nth-child(23), .board5x5 .area span:nth-child(1), .board5x5 .area span:nth-child(3), .board5x5 .area span:nth-child(5),
+.board5x5 .area span:nth-child(7), .board5x5 .area span:nth-child(9), .board5x5 .area span:nth-child(11),
+.board5x5 .area span:nth-child(13), .board5x5 .area span:nth-child(15), .board5x5 .area span:nth-child(17),
+.board5x5 .area span:nth-child(19), .board5x5 .area span:nth-child(21), .board5x5 .area span:nth-child(23) {
+  background: #00c8f0;
+}
+.board3x3 .area span:nth-child(2), .board3x3 .area span:nth-child(4), .board3x3 .area span:nth-child(6),
+.board3x3 .area span:nth-child(8), .board3x3 .area span:nth-child(10), .board3x3 .area span:nth-child(12),
+.board3x3 .area span:nth-child(14), .board3x3 .area span:nth-child(16), .board3x3 .area span:nth-child(18),
+.board3x3 .area span:nth-child(20), .board3x3 .area span:nth-child(22), .board3x3 .area span:nth-child(24), .board4x4 .area span:nth-child(2), .board4x4 .area span:nth-child(4), .board4x4 .area span:nth-child(6),
+.board4x4 .area span:nth-child(8), .board4x4 .area span:nth-child(10), .board4x4 .area span:nth-child(12),
+.board4x4 .area span:nth-child(14), .board4x4 .area span:nth-child(16), .board4x4 .area span:nth-child(18),
+.board4x4 .area span:nth-child(20), .board4x4 .area span:nth-child(22), .board4x4 .area span:nth-child(24), .board5x5 .area span:nth-child(2), .board5x5 .area span:nth-child(4), .board5x5 .area span:nth-child(6),
+.board5x5 .area span:nth-child(8), .board5x5 .area span:nth-child(10), .board5x5 .area span:nth-child(12),
+.board5x5 .area span:nth-child(14), .board5x5 .area span:nth-child(16), .board5x5 .area span:nth-child(18),
+.board5x5 .area span:nth-child(20), .board5x5 .area span:nth-child(22), .board5x5 .area span:nth-child(24) {
+  background: #1ae7ff;
+}
+.board3x3 .brd-sort, .board4x4 .brd-sort, .board5x5 .brd-sort {
+  position: absolute;
+  background: red;
+  font-size: 2rem;
+  width: 280px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 12px;
+  top: -80px;
+}
+
+.board3x3 .area span {
+  font-size: 6rem;
+  width: 140px;
+  line-height: 140px;
+}
+
+.board4x4 .area span {
+  font-size: 4.2rem;
+  width: 102.5px;
+  line-height: 102.5px;
+}
+
+.board5x5 .area span {
+  font-size: 3rem;
+  width: 80px;
+  line-height: 80px;
+}
+
+.status {
+  background: white;
+  width: 470px;
+  height: 280px;
+  border-radius: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 175px 85px;
+}
+.status .sts-text {
+  background: #1ae7ff;
+  font-size: 96px;
+  -webkit-text-stroke: 2px white;
+  text-align: center;
+  width: 440px;
+  line-height: 165px;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.status .btn {
+  display: flex;
+  width: 440px;
+}
+.status .btn button {
+  line-height: 75px;
+  font-size: 56px;
+  font-weight: bold;
+  font-family: calibri, arial, sans-serif;
+  text-align: center;
+  border: none;
+  color: white;
+}
+.status .btn button:nth-child(1) {
+  background: #00c8f0;
+  width: 355px;
+  margin-right: 10px;
+  border-radius: 0 0 0 0.5rem;
+}
+.status .btn button:nth-child(2) {
+  background: red;
+  width: 75px;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.menu .box-lvl, .menu .play,
+.area span,
+.status .btn button {
+  cursor: pointer;
+}
+
+.menu .play:hover, .status .btn button:hover {
+  background: white;
+  color: #222;
+}
+
+.menu .play:active, .status .btn button:active {
+  background: #222;
+  color: white;
+}
+
+.hidden {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  opacity: 0%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.2s;
+  transition-property: transform;
+}
+
+.play {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  opacity: 100%;
+  z-index: 1;
+  transform: scale(1);
+  transition: 0.2s;
+  transition-property: transform;
+}/*# sourceMappingURL=style.css.map */

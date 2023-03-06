@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: calibri, arial, sans-serif;
+  font-weight: bold;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: #222;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.menu {
+  display: grid;
+  place-items: center;
+  width: 440px;
+  height: 440px;
+  box-sizing: border-box;
+}
+.menu .outline {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: -1;
+}
+.menu .outline .main-line {
+  width: 440px;
+  height: 440px;
+  border: 10px solid white;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+.menu .outline span {
+  background: #222;
+  width: 10px;
+  height: 440px;
+  position: absolute;
+}
+.menu .outline span:nth-child(2) {
+  transform: translateX(-150px);
+}
+.menu .outline span:nth-child(3) {
+  transform: translateX(-50px);
+}
+.menu .outline span:nth-child(4) {
+  transform: translateX(50px);
+}
+.menu .outline span:nth-child(5) {
+  transform: translateX(150px);
+}
+.menu .outline span:nth-child(6) {
+  transform: rotateZ(90deg) translateX(-150px);
+}
+.menu .outline span:nth-child(7) {
+  transform: rotateZ(90deg) translateX(-50px);
+}
+.menu .outline span:nth-child(8) {
+  transform: rotateZ(90deg) translateX(50px);
+}
+.menu .outline span:nth-child(9) {
+  transform: rotateZ(90deg) translateX(150px);
+}
+.menu .board-main {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 400px;
+  grid-template-rows: 100px 200px 100px;
+  width: 400px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.menu .board-main .row1, .menu .board-main .row2, .menu .board-main .row3 {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.menu .board-main .row1 span, .menu .board-main .row1 button, .menu .board-main .row2 span, .menu .board-main .row2 button, .menu .board-main .row3 span, .menu .board-main .row3 button {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+.menu .board-main .row1 span, .menu .board-main .row3 button {
+  font-size: 6rem;
+  line-height: 100px;
+  width: 400px;
+  height: 100px;
+}
+.menu .board-main .row2 button {
+  font-size: 12rem;
+  line-height: 200px;
+  width: 200px;
+  height: 200px;
+}
+.menu .board-main .row1 span, .menu .board-main .row2 button:nth-child(2) {
+  background: #ffa01a;
+}
+.menu .board-main .row3 button, .menu .board-main .row2 button:nth-child(1) {
+  background: #e56a18;
+}
+.menu .inline {
+  display: grid;
+  place-items: center;
+  position: absolute;
+}
+.menu .inline span {
+  background: white;
+  width: 5px;
+  height: 400px;
+  position: absolute;
+}
+.menu .inline span:nth-child(1) {
+  transform: translateX(0px);
+  height: 200px;
+}
+.menu .inline span:nth-child(2) {
+  transform: rotateZ(90deg) translateX(-100px);
+}
+.menu .inline span:nth-child(3) {
+  transform: rotateZ(90deg) translateX(100px);
+}
+
+.board {
+  display: grid;
+  place-items: center;
+  font-size: 8rem;
+  width: 490px;
+  height: 490px;
+  box-sizing: border-box;
+}
+.board .outline {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: -1;
+}
+.board .outline .main-line {
+  width: 490px;
+  height: 490px;
+  border: 10px solid white;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+.board .outline span {
+  background: #222;
+  width: 10px;
+  height: 490px;
+  position: absolute;
+}
+.board .outline span:nth-child(2) {
+  transform: translateX(-150px);
+}
+.board .outline span:nth-child(3) {
+  transform: translateX(-50px);
+}
+.board .outline span:nth-child(4) {
+  transform: translateX(50px);
+}
+.board .outline span:nth-child(5) {
+  transform: translateX(150px);
+}
+.board .outline span:nth-child(6) {
+  transform: rotateZ(90deg) translateX(-150px);
+}
+.board .outline span:nth-child(7) {
+  transform: rotateZ(90deg) translateX(-50px);
+}
+.board .outline span:nth-child(8) {
+  transform: rotateZ(90deg) translateX(50px);
+}
+.board .outline span:nth-child(9) {
+  transform: rotateZ(90deg) translateX(150px);
+}
+.board .board-main {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 450px;
+  grid-template-rows: repeat(3, 150px);
+  width: 450px;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.board .board-main .row1, .board .board-main .row2, .board .board-main .row3 {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 450px;
+  height: 150px;
+}
+.board .board-main .row1 span, .board .board-main .row2 span, .board .board-main .row3 span {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+}
+.board .board-main .row1 span:nth-child(1), .board .board-main .row3 span:nth-child(1) {
+  background: #ffa01a;
+}
+.board .board-main .row1 span:nth-child(2), .board .board-main .row3 span:nth-child(2) {
+  background: #e56a18;
+}
+.board .board-main .row1 span:nth-child(3), .board .board-main .row3 span:nth-child(3) {
+  background: #ffa01a;
+}
+.board .board-main .row2 span:nth-child(1) {
+  background: #e56a18;
+}
+.board .board-main .row2 span:nth-child(2) {
+  background: #ffa01a;
+}
+.board .board-main .row2 span:nth-child(3) {
+  background: #e56a18;
+}
+.board .inline {
+  display: grid;
+  place-items: center;
+  position: absolute;
+}
+.board .inline span {
+  background: white;
+  width: 5px;
+  height: 450px;
+  position: absolute;
+}
+.board .inline span:nth-child(1) {
+  transform: translateX(-75px);
+}
+.board .inline span:nth-child(2) {
+  transform: translateX(75px);
+}
+.board .inline span:nth-child(3) {
+  transform: rotateZ(90deg) translateX(-75px);
+}
+.board .inline span:nth-child(4) {
+  transform: rotateZ(90deg) translateX(75px);
+}
+
+.status {
+  display: grid;
+  place-items: center;
+  width: 490px;
+  height: 290px;
+  box-sizing: border-box;
+}
+.status .outline {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: -1;
+}
+.status .outline .main-line {
+  width: 490px;
+  height: 290px;
+  border: 10px solid white;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+.status .outline span {
+  background: #222;
+  width: 10px;
+  position: absolute;
+}
+.status .outline span:nth-child(2), .status .outline span:nth-child(3), .status .outline span:nth-child(4), .status .outline span:nth-child(5) {
+  height: 290px;
+}
+.status .outline span:nth-child(6), .status .outline span:nth-child(7), .status .outline span:nth-child(8) {
+  height: 490px;
+}
+.status .outline span:nth-child(2) {
+  transform: translateX(-150px);
+}
+.status .outline span:nth-child(3) {
+  transform: translateX(-50px);
+}
+.status .outline span:nth-child(4) {
+  transform: translateX(50px);
+}
+.status .outline span:nth-child(5) {
+  transform: translateX(150px);
+}
+.status .outline span:nth-child(6) {
+  transform: rotateZ(90deg) translateX(-100px);
+}
+.status .outline span:nth-child(7) {
+  transform: rotateZ(90deg) translateX(0px);
+}
+.status .outline span:nth-child(8) {
+  transform: rotateZ(90deg) translateX(100px);
+}
+.status .board-main {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 450px;
+  grid-template-rows: 170px 80px;
+  width: 450px;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.status .board-main .row1, .status .board-main .row2 {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.status .board-main .row1 span, .status .board-main .row1 button, .status .board-main .row2 span, .status .board-main .row2 button {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+.status .board-main .row1 span {
+  font-size: 6rem;
+  line-height: 170px;
+  width: 450px;
+  height: 170px;
+  -webkit-text-stroke: 2px white;
+}
+.status .board-main .row2 button {
+  font-size: 3.5rem;
+  line-height: 80px;
+  height: 80px;
+}
+.status .board-main .row1 span {
+  background: #ffa01a;
+}
+.status .board-main .row2 button:nth-child(1) {
+  background: #e56a18;
+  width: 370px;
+}
+.status .board-main .row2 button:nth-child(2) {
+  background: red;
+  width: 80px;
+}
+.status .inline {
+  display: grid;
+  place-items: center;
+  position: absolute;
+}
+.status .inline span {
+  background: white;
+  width: 5px;
+  position: absolute;
+}
+.status .inline span:nth-child(1) {
+  transform: translate(145px, 85px);
+  height: 80px;
+}
+.status .inline span:nth-child(2) {
+  transform: rotateZ(90deg) translateX(45px);
+  height: 450px;
+}
+
+.menu .board-main .row2 button,
+.menu .board-main .row3 button,
+.board .board-main .row1 span,
+.board .board-main .row2 span,
+.board .board-main .row3 span,
+.status .board-main .row2 button {
+  cursor: pointer;
+}
+
+.menu .board-main .row3 button:hover,
+.status .board-main .row2 button:hover {
+  cursor: pointer;
+  background: white;
+  color: #222;
+}
+
+.menu .board-main .row3 button:active,
+.status .board-main .row2 button:active {
+  cursor: pointer;
+  background: greenyellow;
+  color: white;
+}
+
+.hidden {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  opacity: 0%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+.play {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  opacity: 100%;
+  z-index: 1;
+  transform: scale(1);
+  transition: 0.2s;
+}/*# sourceMappingURL=style.css.map */

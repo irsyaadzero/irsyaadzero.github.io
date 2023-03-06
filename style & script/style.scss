@@ -1,0 +1,92 @@
+// ===== Mixin
+@mixin gridItem(){
+    display: grid;
+    place-items: center;
+}
+@mixin page($fn: 3rem, $cl: 1, $bx: 94vw, $mr: 2vw) {
+    $font: $fn;
+    $col: $cl;
+    $box-mrgn: $mr;
+    $box: calc($bx - $box-mrgn*2);
+    $shadow: calc(.006 * $box);
+    .title{
+        font-size: calc(1.2 * $font);
+        line-height: calc(1.2 * 2 * $font);
+        text-decoration: underline
+    }
+    .content{
+        margin-bottom: $font;
+        @include gridItem();
+        grid-template-columns: repeat($col, 1fr);
+        grid-template-rows: auto;
+        .box{
+            background: #333;
+            width: $box;
+            height: $box;
+            margin: $box-mrgn;
+            box-sizing: border-box;
+            box-shadow: 0 0 $shadow $shadow white;
+            @include gridItem();
+            img{width: 100%;}
+            span{
+                align-self: self-end;
+                background: rgba($color: #222, $alpha: .7);
+                color: white;
+                font-size: $font;
+                text-align: center;
+                line-height: calc(1.4 * $font);
+                min-width: $box;
+                position: absolute;
+            }
+        }
+        .box:hover{
+            box-shadow: 0 0 $shadow $shadow red;
+        }
+        .box:active{
+            box-shadow: 0 0 $shadow $shadow blue;
+        }
+    }
+}
+
+// ===== Style
+*{margin: 0; padding: 0;}
+body{
+    background: #222;
+    color: white;
+    font-family: calibri, arial, sans-serif;
+    font-weight: bold;
+    @include gridItem();
+}
+
+// ===== Responsive
+@media screen and (max-width: 575px) {
+    @include page(2.4rem);
+    body .content .box span{
+        font-size: calc(.8 * 2.4rem);
+        line-height: calc(.8 * 1.4 * 2.4rem);
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    @include page();
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    @include page(3.6rem, 2, 48vw, 1vw);
+    body .content .box span{
+        font-size: calc(.6 * 3.6rem);
+        line-height: calc(.6 * 1.4 * 3.6rem);
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1399px) {
+    @include page(4rem, 3, 32vw, .5vw);
+    body .content .box span{
+        font-size: calc(.5 * 4.2rem);
+        line-height: calc(.5 * 1.4 * 4.2rem);
+    }
+}
+@media screen and (min-width: 1400px) {
+    @include page(4.2rem, 4, 24vw, .4vw);
+    body .content .box span{
+        font-size: calc(.5 * 4.2rem);
+        line-height: calc(.5 * 1.4 * 4.2rem);
+    }
+}
